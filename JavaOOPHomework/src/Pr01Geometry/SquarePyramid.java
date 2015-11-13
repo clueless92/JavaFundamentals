@@ -47,12 +47,9 @@ public class SquarePyramid extends SpaceShape {
 
     @Override
     public String toString() {
-        Vertex3D pointO = this.getVertices().get(0);
-        double x = pointO.getX();
-        double y = pointO.getY();
-        double z = pointO.getZ();
-        String text = "Square pyramid with O(%.2f, %.2f, %.2f), base width = %.2f, height = %.2f, area = %.2f, volume = %.2f";
-        String info = String.format(text, x, y, z, baseWidth, height, this.getArea(), this.getVolume());
+        String superInfo = super.toString();
+        String text = "%s, base width = %.2f, height = %.2f, area = %.2f, volume = %.2f";
+        String info = String.format(text, superInfo, baseWidth, height, this.getArea(), this.getVolume());
         return info;
     }
 }

@@ -35,12 +35,9 @@ public class Sphere extends SpaceShape {
 
     @Override
     public String toString() {
-        Vertex3D pointO = this.getVertices().get(0);
-        double x = pointO.getX();
-        double y = pointO.getY();
-        double z = pointO.getZ();
-        String info = String.format("Sphere with O(%.2f, %.2f, %.2f), radius = %.2f area = %.2f, volume = %.2f",
-                x, y, z, radius, getArea(), getVolume());
+        String superInfo = super.toString();
+        String text = "%s, radius = %.2f area = %.2f, volume = %.2f";
+        String info = String.format(text, superInfo, radius, getArea(), getVolume());
         return info;
     }
 }

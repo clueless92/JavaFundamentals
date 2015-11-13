@@ -45,11 +45,9 @@ public class Rectangle extends PlaneShape {
 
     @Override
     public String toString() {
-        Vertex2D pointO = this.getVertices().get(0);
-        double x = pointO.getX();
-        double y = pointO.getY();
-        String info = String.format("Rectangle with O(%.2f, %.2f), width = %.2f, height = %.2f, area = %.2f, perimeter = %.2f",
-                x, y, width, height, this.getArea(), this.getPerimeter());
+        String superInfo = super.toString();
+        String text = "%s, width = %.2f, height = %.2f, area = %.2f, perimeter = %.2f";
+        String info = String.format(text, superInfo, width, height, this.getArea(), this.getPerimeter());
         return info;
     }
 }

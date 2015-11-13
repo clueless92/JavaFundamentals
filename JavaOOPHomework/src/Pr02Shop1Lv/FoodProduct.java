@@ -49,11 +49,10 @@ public class FoodProduct extends Product implements Expirable {
 
     @Override
     public String toString() {
+        String superInfo = super.toString();
         DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
         String date = formatter.format(getExpirationDate());
-        String text = "Food product: %s, price: %.2flv, quantity: %d, age restriction: %s, expiration date: %s";
-        String productInfo = String.format(text, getName(), getPrice(),
-                getQuantity(), getAgeRestriction(), date);
-        return productInfo;
+        String thisInfo = String.format("%s, expiration date: %s", superInfo, date);
+        return thisInfo;
     }
 }

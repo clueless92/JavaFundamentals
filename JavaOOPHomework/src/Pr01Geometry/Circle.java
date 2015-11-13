@@ -36,11 +36,9 @@ public class Circle extends PlaneShape {
 
     @Override
     public String toString() {
-        Vertex2D pointO = this.getVertices().get(0);
-        double x = pointO.getX();
-        double y = pointO.getY();
-        String info = String.format("Circle with O(%.2f, %.2f), radius = %.2f, area = %.2f, parimeter = %.2f",
-                x, y, radius, getArea(), getPerimeter());
+        String superInfo = super.toString();
+        String text = "%s, radius = %.2f, area = %.2f, parimeter = %.2f";
+        String info = String.format(text, superInfo, radius, getArea(), getPerimeter());
         return info;
     }
 }

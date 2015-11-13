@@ -55,12 +55,9 @@ public class Cuboid extends SpaceShape{
 
     @Override
     public String toString() {
-        Vertex3D pointO = this.getVertices().get(0);
-        double x = pointO.getX();
-        double y = pointO.getY();
-        double z = pointO.getZ();
-        String text = "Cuboid with O(%.2f, %.2f, %.2f), width = %.2f, height = %.2f, depth = %.2f, area = %.2f, volume = %.2f";
-        String info = String.format(text, x, y, z, width, height, depth, getArea(), getVolume());
+        String superInfo = super.toString();
+        String text = "%s, width = %.2f, height = %.2f, depth = %.2f, area = %.2f, volume = %.2f";
+        String info = String.format(text, superInfo, width, height, depth, getArea(), getVolume());
         return info;
     }
 }

@@ -46,18 +46,16 @@ public class Triangle extends PlaneShape {
 
     @Override
     public String toString() {
+        String superInfo = super.toString();
         List<Vertex2D> trianglePoints = getVertices();
-        Vertex2D a = trianglePoints.get(0);
         Vertex2D b = trianglePoints.get(1);
         Vertex2D c = trianglePoints.get(2);
-        double aX = a.getX();
-        double aY = a.getY();
         double bX = b.getX();
         double bY = b.getY();
         double cX = c.getX();
         double cY = c.getY();
-        String info = String.format("Triangle with A(%.2f, %.2f), B(%.2f, %.2f), C(%.2f, %.2f), area = %.2f, perimeter = %.2f",
-                aX, aY, bX, bY, cX, cY, getArea(), getPerimeter());
+        String text = "%s, B(%.2f, %.2f), C(%.2f, %.2f), area = %.2f, perimeter = %.2f";
+        String info = String.format(text, superInfo, bX, bY, cX, cY, getArea(), getPerimeter());
         return info;
     }
 }
