@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane prefHeight="215.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="a4.FXMLDocumentController">
+   <children>
+        <Label fx:id="lPause" alignment="BASELINE_CENTER" text="ПАУЗА" textFill="RED">
+         <font>
+            <Font name="System Bold" size="72.0" />
+         </font>
+         <contextMenu>
+            <ContextMenu>
+               <items>
+                  <CheckMenuItem fx:id="cmiScale" mnemonicParsing="false" onAction="#cmiScaleAction" text="Scale" />
+                  <CheckMenuItem fx:id="cmiRotate" mnemonicParsing="false" onAction="#cmiRotateAction" text="Rotate" />
+               </items>
+            </ContextMenu>
+         </contextMenu>
+         <effect>
+            <DropShadow height="66.96" offsetX="10.0" offsetY="10.0" radius="32.61" spread="0.14" width="65.48">
+               <input>
+                  <Lighting diffuseConstant="1.24" specularConstant="0.82" specularExponent="30.23" surfaceScale="5.57">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant azimuth="212.45" elevation="49.19" />
+                     </light>
+                  </Lighting>
+               </input>
+            </DropShadow>
+         </effect>
+      </Label>
+   </children>
+</StackPane>
