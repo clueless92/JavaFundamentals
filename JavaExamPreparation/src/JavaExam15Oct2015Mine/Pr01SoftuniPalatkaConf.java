@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Pr01SoftuniPalatkaConf {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
         int people = sc.nextInt();
         sc.nextLine();
